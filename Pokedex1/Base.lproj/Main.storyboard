@@ -16,11 +16,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="iFb-4r-GU2">
+                                <rect key="frame" x="0.0" y="99" width="600" height="501"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8g-J5-mPd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="dac-U3-1mo"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-C6-hzw">
+                                <rect key="frame" x="20" y="119" width="560" height="461"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X29-0i-F4R">
+                                    <size key="itemSize" width="110" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CZ0-UV-VA1">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="297" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-oP-AeX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="89"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkU-ya-GnX">
+                                                    <rect key="frame" x="0.0" y="89" width="110" height="21"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="9JZ-YQ-MBm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.6528716216216216" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="JkU-ya-GnX" firstAttribute="top" secondItem="UGG-oP-AeX" secondAttribute="bottom" id="3zT-Aw-97l"/>
+                                            <constraint firstItem="UGG-oP-AeX" firstAttribute="top" secondItem="CZ0-UV-VA1" secondAttribute="top" id="Mo3-dL-5Pn"/>
+                                            <constraint firstAttribute="trailing" secondItem="UGG-oP-AeX" secondAttribute="trailing" id="QWc-4J-0gr"/>
+                                            <constraint firstAttribute="trailing" secondItem="JkU-ya-GnX" secondAttribute="trailing" id="d6l-wE-sOm"/>
+                                            <constraint firstItem="UGG-oP-AeX" firstAttribute="leading" secondItem="CZ0-UV-VA1" secondAttribute="leading" id="dO3-I2-92B"/>
+                                            <constraint firstAttribute="bottom" secondItem="JkU-ya-GnX" secondAttribute="bottom" id="eJX-1a-9tt"/>
+                                            <constraint firstItem="JkU-ya-GnX" firstAttribute="leading" secondItem="CZ0-UV-VA1" secondAttribute="leading" id="pPA-Xb-4d1"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="t2h-a5-roX">
+                                <rect key="frame" x="0.0" y="55" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iFb-4r-GU2" firstAttribute="top" secondItem="g8g-J5-mPd" secondAttribute="bottom" id="04r-qd-Ed1"/>
+                            <constraint firstItem="iFb-4r-GU2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2XF-PZ-g9M"/>
+                            <constraint firstItem="g8g-J5-mPd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2lM-EU-yjK"/>
+                            <constraint firstAttribute="trailing" secondItem="g5a-C6-hzw" secondAttribute="trailing" constant="20" id="8hw-nE-rLa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g5a-C6-hzw" secondAttribute="bottom" constant="20" id="8xb-xM-HYN"/>
+                            <constraint firstItem="g8g-J5-mPd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HV6-dD-xQt"/>
+                            <constraint firstItem="t2h-a5-roX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HgW-Pa-Izo"/>
+                            <constraint firstAttribute="trailing" secondItem="iFb-4r-GU2" secondAttribute="trailing" id="NKV-Vm-SP1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iFb-4r-GU2" secondAttribute="bottom" id="RLf-RD-Bhs"/>
+                            <constraint firstItem="g5a-C6-hzw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Twb-7m-Em2"/>
+                            <constraint firstItem="g5a-C6-hzw" firstAttribute="top" secondItem="t2h-a5-roX" secondAttribute="bottom" constant="20" id="ZCG-BS-Vax"/>
+                            <constraint firstItem="iFb-4r-GU2" firstAttribute="top" secondItem="t2h-a5-roX" secondAttribute="bottom" id="j4f-Sk-9Ny"/>
+                            <constraint firstItem="t2h-a5-roX" firstAttribute="top" secondItem="g8g-J5-mPd" secondAttribute="bottom" id="oWR-0j-wPh"/>
+                            <constraint firstAttribute="trailing" secondItem="g8g-J5-mPd" secondAttribute="trailing" id="tUe-yg-04s"/>
+                            <constraint firstAttribute="trailing" secondItem="t2h-a5-roX" secondAttribute="trailing" id="zzo-Z4-Ebp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="04r-qd-Ed1"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="726" y="634"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="297" width="120" height="120"/>
+        <image name="bg" width="1920" height="1200"/>
+    </resources>
 </document>
