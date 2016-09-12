@@ -80,6 +80,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSizeMake(105, 105)
     }
     
+    @IBAction func musicBtnPressed(sender: AnyObject) {
+        
+        
+    }
 
 
 
